@@ -1,0 +1,62 @@
+
+
+
+Creating Projects with components, entity, service
+-------------------------------------------------------
+
+1.From command or vs code or intellij or any terminal
+2.Go to cd folder/pwd/file you want to create
+3.If vs code terminal not work –run as administration and copy paste this code on 
+  terminal-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+4.Create new Project-- ng new projectName   
+  Ex. ng new  AmazonEmployeeFrontEndNG
+
+5.Would you like to add Angular routing? Yes
+6.Select-yes and choose option ---SCSS
+
+7.Create Component--ng g c component/folder name (4 component)
+ (Inside the component—html, scss, spec.ts and ts files)
+ Ex. ng g c Employee, ng g c User, ng g c Admin, ng g c service,   ng g c entity,   ng g c repository
+
+8.Create Package(service, entity etc) and Create Class inside the package folder
+  Create Folder--- ng g class folder name
+  Ex--- ng g class Employee   -Output-(employee.ts)
+
+  Create Service Class -- ng g service file name
+  Ex. ng g service employee  -Output(employe.service.ts)
+
+Generate the new files---------
+  ng new ProjectName(New Project)
+  ng g class NewName(Class ts file)
+  ng g service NewName(service Class)
+  ng g c NewName(Components)
+  ng g m NewName(Module Class)
+
+----------------------------------------------------------------
+Change Angular Port - ng serve –port 4565 (defult 4200)
+Or--Go to Run and Add Configuration and change the Port Number.
+OR---Go to under the Project .vscode and click on launch.json
+
+
+-------------------------------------------------------------------
+For Bootstrap(Go to Angular.json and paste)
+This code for Beatify the webpage
+  "styles": ["src/styles.scss",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+
+  "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+
+*******************
+Bootstrap Version 
+Go to Package--package.jason
+"bootstrap": "^5.3.0",
+
+******************************
+For Example :-
+Important:-
+Folder name ----customers.service.ts
+Inside the-- export class className
+//Database connections-->>>>>>>>>>>>>
+url: string ='http://localhost:8080/students’--service file name (students)
+constructor(private http : HttpClient){ }

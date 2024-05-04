@@ -1,0 +1,10 @@
+
+
+
+Most important class to works
+---------------------------------
+Main Defult file
+=app.module.ts  // Import the file and connect
+=app.routing.module.ts  //To connect all the create page
+
+--Prettier Code--alt+shift+F

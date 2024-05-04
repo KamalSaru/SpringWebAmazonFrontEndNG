@@ -1,0 +1,114 @@
+<body style="background-color: powderblue"></body>
+
+<!-- Text moving -->
+<!-- Images and background-color -->
+<marquee direction="right" behavior="alternate" style="background-color: aquamarine">
+  <img alt=">>>>>>>>>>>>>>>>>>>" />
+  <img alt="Wellcome Wellcome!!" src="assets/plane.png" height="100px" width="200px" />
+  <img alt="Wellcome Wellcome!!" src="assets/plane.png" height="100px" width="200px" />
+  <img alt="Wellcome Wellcome!!" src="assets/plane.png" height="100px" width="200px" />
+  <img alt="Wellcome Wellcome!!" src="assets/plane.png" height="100px" width="200px" />
+  <img alt="<<<<<<<<<<<<<<<<<<<<" />
+</marquee>
+<header style="height: 30px; background-color: green"></header>
+
+<!--Searching bar -->
+<div class="d-flex">
+  <input class="form-control m-2" style="background-color: darkgrey; border: 2px solid tomato"
+    placeholder="Type to search" />
+  <button class="btn btn-success m-2" onclick="search()">Search</button>
+</div>
+
+<!-- Navigation bar/title/menu bar -->
+<br />
+<h1 class="title-red">User Login</h1>
+
+<!-- <form (ngSubmit)="userLogin()"> -->
+
+<p style="margin-bottom: 10px">Have you an Account?</p>
+<p>
+  --------------------------------------------------------------------------------------------------------
+</p>
+
+<div>
+  <p [ngStyle]="{ color: userName.length > 0 ? 'green' : 'red' }">
+    Enter the UserName!!!
+  </p>
+  <label for ="username"><span style="color:red;">*</span>Username:- </label>
+  <input style="margin-bottom: 30px; background-color: aquamarine" [(ngModel)]="userName" name="userName" class="text"
+    type="text" placeholder="Enter Username" required />
+  <div *ngIf="userLoginForm.get('userName')?.errors?.['minlength'] && userLoginForm.get('userName')?.touched"
+    class="err">
+    Please enter the user name!!
+  </div>
+
+  <!-- {{userName}} -->
+
+  <div>
+    <p [ngStyle]="{ color: password.length > 0 ? 'green' : 'red' }">
+      Enter the UserName!!!
+    </p>
+    <label for="password"><span style="color:red;">*</span>Password:- </label>
+    <input style="margin-bottom: 30px; background-color: aquamarine" class="text" type="password" [(ngModel)]="password"
+      name="password" placeholder="Enter Password" required />
+    <div *ngIf="userLoginForm.get('password')?.errors?.['minlength'] && userLoginForm.get('password')?.touched"
+      class="err">
+      Please enter the password!!
+    </div>
+    <br />
+
+    <!-- After login success go to Employee_List -->
+    <button class="btn btn-success m-2" (click)="userLogin()">Login</button>
+    <p>==================================</p>
+    <br />
+
+    <a class="btn btn-success m-2" routerLink="/wellcome">Sign Out</a>
+
+    <!-- Create user register link -->
+    <a class="btn btn-success m-2" routerLink="/register">Register New Users</a>
+
+    <!-- Warning message -->
+    <strong> Warning! </strong> Please make sure to sign out!!!
+
+    <br />
+    <p>
+      --------------------------------------------------------------------------------------------------------
+    </p>
+    <!-- Link buttons -->
+    <p>Learnign Sources link :-</p>
+    <a href="https://www.w3schools.com/angular/default.asp">
+      <button class="btn btn-primary m-2" type="button">AngularJS</button>
+    </a>
+
+    <a href="https://www.w3schools.com/html/default.asp">
+      <button class="btn btn-primary m-2" type="button">HTML5</button>
+    </a>
+
+    <a href="https://www.w3schools.com/js/default.asp">
+      <button class="btn btn-primary m-2" type="button">JavaScript</button>
+    </a>
+
+    <a href="https://www.w3schools.com/css/default.asp">
+      <button class="btn btn-primary m-2" type="button">CSS</button>
+    </a>
+
+    <a href="https://www.javatpoint.com/java-tutorial">
+      <button class="btn btn-primary m-2" type="button">JAVA</button>
+    </a>
+
+    <a href="https://www.w3schools.com/mysql/default.asp">
+      <button class="btn btn-primary m-2" type="button">MySQL</button>
+    </a>
+
+    <a href="https://www.w3schools.com/howto">
+      <button class="btn btn-primary m-2" type="button">Menu Bars</button>
+    </a>
+    <p>
+      ---------------------------------------------------------------------------------------------------------
+    </p>
+
+    <!-- Getting data from the  -->
+    <!-- <app-wellcome-page [alert]="parentAlert" (childEvent)="handleChildEvent($event)"></app-wellcome-page>
+    Getting Data : {{dataForChild}} -->
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<p>user-register works!</p>
+
+
+<!-- Creating the new user -->
+<form ng-hide="hideform">
+    <h3 ng-show="edit">Create New User:</h3>
+      <label>First Name:</label>
+      <input class="btn btn-success m-2"  type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name">
+    <br>
+    <br>
+      <label>Last Name:</label>
+      <input class="btn btn-success m-2"  type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last Name">
+    <br>
+
+    <label> Gender : </label>
+            <label for="gender">Gender:</label>
+            <div>
+              <input type="radio" customerID="male" value="Male" formControlName="gender" />
+              <label for="male">Male</label>
+            <div>
+              <input type="radio" customerID="female" value="Female" formControlName="gender" />
+              <label for="female">Female</label>
+            </div>
+        </div>
+
+        <br>
+      <label>User Name:</label>
+      <input class="btn btn-success m-2"  type="userName" ng-model="userName" placeholder="UserName">
+    <br>
+
+
+    <br>
+      <label>Password:</label>
+      <input class="btn btn-success m-2"  type="password" ng-model="passw1" placeholder="Password">
+    <br>
+    <br>
+      <label>Repeat:</label>
+      <input class="btn btn-success m-2"  type="password" ng-model="password" placeholder="Repeat Password">
+    <br>
+    <br>
+    <button class="btn btn-success m-2"  ng-disabled="error || incomplete">&#10004; Save User Register!!!</button>
+
+    <div>
+      <!----when click on sign out to go homepage------------------>
+        <p>Back To HomePage</p>
+        <button class="btn btn-primary" routerLink="wellcome"> Back </button>
+    </div>
+

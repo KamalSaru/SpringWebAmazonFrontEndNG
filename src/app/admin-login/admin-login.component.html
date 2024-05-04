@@ -1,0 +1,40 @@
+
+
+
+<br>
+<br>
+
+<!-- userName -->
+<div>
+  <label for ="username"><span style="color:red;">*</span>Username:- </label>
+  <input type="text" [(ngModel)]="userName" placeholder="Enter the valid password!!!"/>
+  <div *ngIf="adminLoginForm.get('userName')?.errors?.['required'] && adminLoginForm.get('userName')?.touched" class="err">
+    Please enter valid password!!
+    <div *ngIf="adminLoginForm.get('userName')?.errors?.['minlength'] && adminLoginForm.get('userName')?.touched" class="err">
+      Password should contain minimum six characters!!
+  </div>  
+  </div>
+</div>
+
+<br>
+<!-- password -->
+<div>
+  <label for="password"><span style="color:red;">*</span>Password:- </label>
+  <input type="password"class="form-controll" [(ngModel)]="password" placeholder="Enter the valid userName!!"/>
+  <div *ngIf="adminLoginForm.get('password')?.errors?.['required'] && adminLoginForm.get('password')?.touched" class="err">
+    Please enter valid password!!
+    <div *ngIf="adminLoginForm.get('password')?.errors?.['minlength'] && adminLoginForm.get('password')?.touched" class="err">
+      Password should contain minimum six characters!!
+  </div>  
+  </div>
+</div>
+
+<div *ngIf="loginError" class="error-msg">Invalid username or password</div>
+<button class="btn btn-success m-2" (click)="adminLogin()">Login</button>
+<button class="btn btn-success m-2" (click)="navigateWellcome()">Sign Out</button>
+
+<!-- need to routerlink with the / Ex./wellcome -->
+<a class="btn btn-success m-2" routerLink="/wellcome">Go-To-Home</a>
+<button class="btn btn-success m-2" (click)="navigate()">Employee_List</button>
+
+

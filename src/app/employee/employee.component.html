@@ -1,0 +1,20 @@
+
+
+
+
+
+<br>
+<p>>>>>>>>>data from----employee list--child class</p>
+
+<!-- data connnect to the child class --employee-list in Employee> -->
+<app-employee-list [getdataFromParent]="'----data from child class employee-list--------'"></app-employee-list>
+
+
+
+<!-- Getting employee-list again -->
+<!-- Sending data to the child class -->
+<br>
+Getting Data From Child : {{data}}
+<app-employee-list (sendingData)="data=$event"></app-employee-list>
+
+
