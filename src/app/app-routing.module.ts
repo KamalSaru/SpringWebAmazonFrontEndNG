@@ -10,6 +10,7 @@ import { EmployeeComponent } from './employee/employee.component';
 
 
 
+
 //This part important to connect
 //this component for open pages---------------------------------------------------------------------
 //app routing to link to open the pages-----------------

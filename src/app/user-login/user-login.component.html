@@ -10,7 +10,8 @@
   <img alt="Wellcome Wellcome!!" src="assets/plane.png" height="100px" width="200px" />
   <img alt="<<<<<<<<<<<<<<<<<<<<" />
 </marquee>
-<header style="height: 30px; background-color: green"></header>
+<header style="height: 20px; background-color: rgba(223, 19, 138, 0.664) "></header>
+
 
 <!--Searching bar -->
 <div class="d-flex">
@@ -20,47 +21,48 @@
 </div>
 
 <!-- Navigation bar/title/menu bar -->
-<br />
-<h1 class="title-red">User Login</h1>
+<!-- &ensp; for the space  -->
+<br/>
+<h1 class="title-red" style="margin: 15px;">User Login</h1>
 
 <!-- <form (ngSubmit)="userLogin()"> -->
 
-<p style="margin-bottom: 10px">Have you an Account?</p>
+<p style="margin-bottom: 10px; margin: 15px;"><b>Have you an Account?</b></p>
 <p>
   --------------------------------------------------------------------------------------------------------
 </p>
 
 <div>
-  <p [ngStyle]="{ color: userName.length > 0 ? 'green' : 'red' }">
+  <p [ngStyle]="{ color: userName.length > 0 ? 'green' : 'red' }" style="margin: 15px;">
     Enter the UserName!!!
   </p>
-  <label for ="username"><span style="color:red;">*</span>Username:- </label>
-  <input style="margin-bottom: 30px; background-color: aquamarine" [(ngModel)]="userName" name="userName" class="text"
-    type="text" placeholder="Enter Username" required />
-  <div *ngIf="userLoginForm.get('userName')?.errors?.['minlength'] && userLoginForm.get('userName')?.touched"
+  <label for="username"><span style="color:red; margin: 10px;">*</span><b>Username:- </b></label>
+  <input style="margin-bottom: 30px; background-color: aquamarine; border: 2px solid tomato" [(ngModel)]="userName"
+    name="userName" class="text" type="text" placeholder="Enter Username???" required />
+  <!-- <div *ngIf="userLoginForm.get('userName')?.errors?.['minlength'] && userLoginForm.get('userName')?.touched"
     class="err">
-    Please enter the user name!!
-  </div>
+    Please enter the user name!!!
+  </div> -->
 
   <!-- {{userName}} -->
 
   <div>
-    <p [ngStyle]="{ color: password.length > 0 ? 'green' : 'red' }">
-      Enter the UserName!!!
+    <p [ngStyle]="{ color: password.length > 0 ? 'green' : 'red' }" style="margin: 15px;">
+      Enter the password!!!
     </p>
-    <label for="password"><span style="color:red;">*</span>Password:- </label>
-    <input style="margin-bottom: 30px; background-color: aquamarine" class="text" type="password" [(ngModel)]="password"
-      name="password" placeholder="Enter Password" required />
-    <div *ngIf="userLoginForm.get('password')?.errors?.['minlength'] && userLoginForm.get('password')?.touched"
+    <label for="password"><span style="color:red; margin: 10px;">*</span><b>Password:- </b></label>
+    <input style="margin-bottom: 30px; background-color: aquamarine; border: 2px solid tomato" class="text"
+      type="password" [(ngModel)]="password" name="password" placeholder="Enter Password???" required />
+    <!-- <div *ngIf="userLoginForm.get('password')?.errors?.['minlength'] && userLoginForm.get('password')?.touched"
       class="err">
       Please enter the password!!
-    </div>
-    <br />
+    </div> -->
+    <br/>
 
     <!-- After login success go to Employee_List -->
-    <button class="btn btn-success m-2" (click)="userLogin()">Login</button>
+    <button class="btn btn-success m-2" (click)="userLogin()" style="margin:20px;">Login</button>
     <p>==================================</p>
-    <br />
+    <br/>
 
     <a class="btn btn-success m-2" routerLink="/wellcome">Sign Out</a>
 
@@ -70,12 +72,12 @@
     <!-- Warning message -->
     <strong> Warning! </strong> Please make sure to sign out!!!
 
-    <br />
+    <br/>
     <p>
       --------------------------------------------------------------------------------------------------------
     </p>
-    <!-- Link buttons -->
-    <p>Learnign Sources link :-</p>
+    <!-- Link buttons -- text bold <b></b>------->
+    <p style="margin: 15px; color: orangered;"><b>Learnign Sources link :-</b></p>
     <a href="https://www.w3schools.com/angular/default.asp">
       <button class="btn btn-primary m-2" type="button">AngularJS</button>
     </a>

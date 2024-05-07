@@ -1,39 +1,59 @@
 
 
-
 <!--Main full page-->
 <!-- Remove all the defult code from here and update new design code.. -->
 
 
-<!--Design UI---------------------------------------------------->
-<!-- <div style="background-color: #9cd6b6; height: 100vh; display: flex; justify-content: center; align-items: center;">
-</div> -->
-
- <!-- Load an icon library infront the Menu tab-->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
  <!-- Navicgation bar Design and some code in the css file-->
  <!-- add routerLink="routeName" to go the page -->
+ <!-- Load an icon library infront the Menu tab-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <div class="navbar">
    <a class="active" routerLink="wellcome"><i class="fa fa-fw fa-home"></i> Home</a>
-   <a href="#"><i class="fa fa-fw fa-about"></i>About</a>
-
-   <a href="#"><i class="fa fa-fw fa-search"></i>Best Seller</a>
-   <a href="#"><i class="fa fa-fw fa-search"></i>New Release</a>
-   <a href="#"><i class="fa fa-fw fa-deals"></i>Todays-Deals</a>
-   <a routerLink="employee"><i class="fa fa-fw fa-deals"></i>Employee List</a>
-   <a href="#"><i class="fa fa-fw fa-mail"></i>Customer-Service</a>
-   <a routerLink="user"><i class="fa fa-fw fa-user"></i>User-Login</a>
-   <a routerLink="admin"><i class="fa fa-fw fa-user"></i>Admin-Login</a>
+   <a  href="#"><i class="fa fa-fw fa-home"></i>About</a>
+   <a  href="#"><i class="fa fa-fw fa-search"></i>Best Seller</a>
+   <a  href="#"><i class="fa fa-fw fa-search"></i>New Release</a>
+   <a  href="#"><i class="fa fa-fw fa-search"></i>Todays-Deals</a>
+   <a  routerLink="employee"><i class="fa fa-fw fa-search"></i>Employee List</a>
+   <a  href="#"><i class="fa fa-fw fa-envelope"></i>Customer-Service</a>
+   <a  href="#"><i class="fa fa-fw fa-user"></i>New Register</a>
+   <a  routerLink="user"><i class="fa fa-fw fa-user"></i>User-Login</a>
+   <a  routerLink="admin"><i class="fa fa-fw fa-user"></i>Admin-Login</a>
  </div> 
 
 
-<body style="background-color:powderblue;"></body>
+<body style="background-color:powderblue;"></body> 
 <!-- <h1 style="color: darkgreen" class="py-2 text-center">Amazon Flash</h1> -->
 <!-- <h2 class="py-1 text-center" >Hello!!! Client!!!</h2> -->
 <!-- <p class="py-0.5 text-center">*****************************************************************</p> -->
 
-<!--<br>-->
+
 
 <!--//Connect outer outlet-->
 <router-outlet></router-outlet>
+
+
+<!-- Footer class from footer -->
+<div>
+  <app-footer></app-footer>
+</div>
+<html>
+
+
+<!-- ------For verticalline show side of line-->
+<html>
+  <head>
+  <style>
+  .verticalLine {
+    border-left:8px solid orange;
+    position:fixed;
+    left: 0;
+    top: 0; /*Position at the top */
+    height: 100vh; /*Set height to 100% of viewport height */
+  }
+  </style>
+  </head>
+  <body>
+  <div class="verticalLine"></div>
+  </body>
+  </html>

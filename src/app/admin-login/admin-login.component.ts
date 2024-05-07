@@ -11,7 +11,6 @@ import { AdminLoginService } from './admin-login.service';
 
 
 export class AdminLoginComponent {
-
   userName : string='';
   password : string='';
   loginError: boolean=false;
@@ -20,8 +19,7 @@ export class AdminLoginComponent {
   
 
   constructor(private router: Router,
-    private adminLoginService : AdminLoginService
-  ){}
+    private adminLoginService : AdminLoginService){}
 
   //navigate to employee list
   navigate(){
@@ -45,17 +43,15 @@ export class AdminLoginComponent {
   adminLogin(): void{
    if(this.adminLoginService.adminLogin(this.userName, this.password)){
     this.router.navigateByUrl('employee')
+    this.loginError=false;
     console.log('Admin login successfull!!!');
     alert('Admin login success!!!')
     alert(this.adminLoginService.wellcomeMessage) //message from service class
-    this.loginError=false;
    } else{
-    console.log('Invalid userName or password!!!')
     this.loginError =true;
+    console.log('Invalid userName or password!!!')
     alert(this.adminLoginService.warning)
     alert(this.adminLoginService.lockwarning)
    }
   }
-
-  signOut(){}
 }

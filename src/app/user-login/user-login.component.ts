@@ -15,9 +15,6 @@ import { UserLoginService } from './user-login.service';
 export class UserLoginComponent {
   userName : string='';  
   password : string='';
-
-  //Remove error !
-  //Create userLoginForm
   userLoginForm !: FormGroup;
   loginError: boolean=false;
 
@@ -28,14 +25,13 @@ export class UserLoginComponent {
     this.dataForChild=name
   }
 
-
   navigate(){
     this.router.navigateByUrl('employee')
   }
 
   constructor(private formBuilder : FormBuilder,
     private router : Router,
-  private userLoginService: UserLoginService){}
+    private userLoginService: UserLoginService){}
 
 
   //UserName and Password validators
@@ -51,16 +47,15 @@ export class UserLoginComponent {
   userLogin(): void{
     if(this.userLoginService.userLogin(this.userName, this.password)){
       this.router.navigateByUrl('employee')
+      this.loginError=false;
       console.log('User login successfull!!!');
       alert('User login successfull!!!')
       alert(this.userLoginService.wellcomeMessage) //message from service class
-      this.loginError=false;
      } else{
-      console.log('Invalid userName or password!!!')
       this.loginError =true;
+      console.log('Invalid userName or password!!!')
       alert(this.userLoginService.warning) //message from service
       alert(this.userLoginService.lockwarning)
      }
     }
-
 }

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Employee } from '../entity/employee';
 import { Router } from '@angular/router';
+import { Employee } from '../entity/employee';
 
 @Component({
   selector: 'app-employee-list',
@@ -21,7 +21,7 @@ export class EmployeeListComponent implements OnInit {
   
   //sending data to the parent
   @Output() sendingData = new EventEmitter();
-  data="Hello from child"
+  data="Hello from child!!!"
 
   sendData(dataFromhtml: any){
     this.sendingData.emit(dataFromhtml)

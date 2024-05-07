@@ -10,6 +10,8 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { WellcomePageComponent } from './wellcome-page/wellcome-page.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 // @ts-ignore
 @NgModule({
@@ -21,7 +23,9 @@ import { EmployeeComponent } from './employee/employee.component';
     EmployeeListComponent,
     EmployeeRegisterComponent,
     WellcomePageComponent,
-    EmployeeComponent //Connect Userlogin component
+    EmployeeComponent,
+    FooterComponent,
+    HeaderComponent //Connect Userlogin component
   ],
 
   // import the data

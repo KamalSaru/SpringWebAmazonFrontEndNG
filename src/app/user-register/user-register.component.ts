@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-register',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-register.component.scss']
 })
 export class UserRegisterComponent {
+
+
+  constructor(){}
+  ngOninit(): void{}
 
 }

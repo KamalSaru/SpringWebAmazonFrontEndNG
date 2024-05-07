@@ -7,4 +7,16 @@ Main Defult file
 =app.module.ts  // Import the file and connect
 =app.routing.module.ts  //To connect all the create page
 
+
+--npm install
+--npm install bootstrap
 --Prettier Code--alt+shift+F
+--npm install prettier -D --save-exact
+
+--install for the bootstrap icon
+npm i bootstrap-icons
+https://icons.getbootstrap.com/
+
+--install-
+npm install json-server
+"json-server":"^0.17.2"
