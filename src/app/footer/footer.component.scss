@@ -14,5 +14,30 @@
     margin-top: auto;
   }
 
-
+  .social-links {
+    display: inline-flex; /* Makes the container a flex container, aligning children inline */
+    justify-content: center; /* Centers flex items on the main-axis (horizontally) */
+    grid-area: 25; /* Space between social link items */
+  }
+  
+  .social-link {
+    font-size: 30px; /* Adjust icon size as necessary */
+    padding:5px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    /* Additional styles for the links/icons */
+  }
+  
+  .fa-facebook { color: rgb(44, 57, 247); }
+  .fa-twitter { color: #1DA1F2; }
+  .fa-instagram { color: #09f343; }
+  .fa-tiktok { color: #2009f3; }
+  /* Add styles for additional icons */
+  
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+  }
 

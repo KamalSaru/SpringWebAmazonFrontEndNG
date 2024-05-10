@@ -32,6 +32,7 @@ Generate the new files---------
   ng g service NewName(service Class)
   ng g c NewName(Components)
   ng g m NewName(Module Class)
+  ng g interface NewName (Interface Class)
 
 ----------------------------------------------------------------
 Change Angular Port - ng serve –port 4565 (defult 4200)
@@ -60,3 +61,16 @@ Inside the-- export class className
 //Database connections-->>>>>>>>>>>>>
 url: string ='http://localhost:8080/students’--service file name (students)
 constructor(private http : HttpClient){ }
+
+
+-------------------------------------------------------------------
+Json server port:3000 defult
+Run Json-server---install
+-npm install -g json-server
+-json-server --watch db.json(file name)---Go to file directory
+-http://localhost:3000/data
+    GET /posts: Retrieve all posts
+    GET /posts/1: Retrieve post with ID 1
+    POST /posts: Create a new post
+    PUT /posts/1: Update post with ID 1
+    DELETE /posts/1: Delete post with ID 1

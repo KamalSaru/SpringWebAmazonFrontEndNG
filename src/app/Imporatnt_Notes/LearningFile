@@ -7,6 +7,14 @@ Main Defult file
 =app.module.ts  // Import the file and connect
 =app.routing.module.ts  //To connect all the create page
 
+Default Port
+Json Server-http://localhost:3000
+Angular -http://localhost:4200
+SpringBoot-http://localhost:8080
+MySQL -http://localhost:3306
+PostgreSQL : http://localhost:5432
+
+
 
 --npm install
 --npm install bootstrap
@@ -20,3 +28,12 @@ https://icons.getbootstrap.com/
 --install-
 npm install json-server
 "json-server":"^0.17.2"
+
+--Install Json server
+https://www.youtube.com/watch?v=DKgm40em9Mg
+
+--Springboot-Mcroservice--
+https://youtu.be/T2rBkbT50TE?si=Wej4F5qcIVtICq1R
+
+--Website Domain host--
+https://www.squarespace.com

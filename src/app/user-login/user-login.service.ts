@@ -5,8 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class UserLoginService {
 
-  constructor() { }
-
+   //All logics are in service.ts and component ts--------------------
+   url: string ='http://localhost:8080/employee'  //Connect data to the database and backend java--------------------------
+   userLoginForm: any;
+   userLoginService: any;
+   constructor(){ }
+ 
   userLogin(userName : string, password: string): boolean{
     return userName==='tanuja' && password==='tanuja123';
   }

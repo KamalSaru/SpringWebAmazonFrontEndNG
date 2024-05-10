@@ -1,0 +1,32 @@
+
+{
+    "userList": [
+        {
+            "firstName":"Kamal",
+            "lastName": "Saru",
+            "gender":"Male",
+            "position":"Owner",
+            "department":"Sales",
+            "userName":"kamal",
+            "passwored":"kamal123"
+        },
+        {
+            "firstName":"Tanuja",
+            "lastName": "Thapa",
+            "gender":"Female",
+            "position":"Accountant",
+            "department":"Marketing",
+            "userName":"tanuja",
+            "passwored":"tanuja123"
+        },
+        {
+            "firstName":"Tanisha",
+            "lastName": "Thapa",
+            "gender":"Female",
+            "position":"Manager",
+            "department":"Accountatn",
+            "userName":"tanisha",
+            "passwored":"tanisha"
+        }
+    ]
+}

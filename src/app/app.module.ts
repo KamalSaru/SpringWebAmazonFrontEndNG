@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserLoginComponent } from './user-login/user-login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -12,6 +12,8 @@ import { WellcomePageComponent } from './wellcome-page/wellcome-page.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {HttpClientModule} from "@angular/common/http";
+
 
 // @ts-ignore
 @NgModule({
@@ -32,7 +34,9 @@ import { HeaderComponent } from './header/header.component';
   imports: [
     BrowserModule, //Defult
     AppRoutingModule,//Defule
-    FormsModule //Need Create FormModule and Connect the ngModule
+    FormsModule, //Need Create FormModule and Connect the ngModule
+    ReactiveFormsModule,  //Work for form group
+    HttpClientModule,  //For json server
   ],
 
   // export the data

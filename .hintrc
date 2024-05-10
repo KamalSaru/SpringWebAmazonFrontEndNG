@@ -8,13 +8,15 @@
     "axe/parsing": [
       "default",
       {
-        "marquee": "off"
+        "marquee": "off",
+        "duplicate-id-aria": "off"
       }
     ],
     "axe/forms": [
       "default",
       {
-        "label": "off"
+        "label": "off",
+        "select-name": "off"
       }
     ],
     "axe/name-role-value": [
@@ -35,6 +37,12 @@
       "default",
       {
         "aria-allowed-attr": "off"
+      }
+    ],
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
       }
     ]
   }

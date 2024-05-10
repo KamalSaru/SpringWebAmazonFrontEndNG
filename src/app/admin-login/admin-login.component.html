@@ -6,13 +6,13 @@
 <!-- userName -->
 
 
-<!-- background-color for admin only -->
-<body style=" background-color:rgba(161, 222, 247, 0.795)">
+<!-- background-color for admin login area only -->
+<body style=" background-color:rgba(161, 222, 247, 0.795); margin-top: 25px;">
 
-
+<br>
 <div>
-  <label for ="userName"><span style="color:red; margin: 10px;">*</span><b>UserName:-</b></label>
-  <input style="margin-bottom: 30px; background-color: aquamarine; border: 2px solid rgb(163, 5, 92)" type="text"  [(ngModel)]="userName" placeholder="Enter the valid userName???"/>
+  <label appearance="outline" for ="userName" ><span style="color:red; margin: 10px;">*</span><b>UserName:-</b></label>
+  <input style="margin-bottom: 30px; background-color: aquamarine; border: 2px solid rgb(163, 5, 92)" type="text"  [(ngModel)]="userName"  placeholder="Enter the valid userName???"/>
   <!-- <div *ngIf="adminLoginForm.get('userName')?.errors?.['required'] && adminLoginForm.get('userName')?.touched" class="err">
     Please enter valid password!!
     <div *ngIf="adminLoginForm.get('userName')?.errors?.['minlength'] && adminLoginForm.get('userName')?.touched" class="err">

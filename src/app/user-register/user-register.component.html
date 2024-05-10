@@ -1,49 +1,66 @@
-<p>user-register works!</p>
+<section class="vh-100 gradient-custom">
+<br>
+<div style="display: flex;">
+  <div class="container m-2">
+    <form class="form-group mb-2" FormControll="userRegisterForm">
 
+      <div class="form-group">
+        <label for="firstName"><span style="color:red;"></span>First Name:- </label>
+        <input type="firstName" class="form-control" formControlName="firstName"
+          placeholder="Please provide first name.">
+      </div>
 
-<!-- Creating the new user -->
-<form ng-hide="hideform">
-    <h3 ng-show="edit">Create New User:</h3>
-      <label>First Name:</label>
-      <input class="btn btn-success m-2"  type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name">
-    <br>
-    <br>
-      <label>Last Name:</label>
-      <input class="btn btn-success m-2"  type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last Name">
-    <br>
+      <div class="form-group">
+        <label for="lastName"><span style="color:red;"></span>Last Name:- </label>
+        <input type="lastName" class="form-control" formControlName="lastName" placeholder="Please provide last name.">
+      </div>
 
-    <label> Gender : </label>
-            <label for="gender">Gender:</label>
-            <div>
-              <input type="radio" customerID="male" value="Male" formControlName="gender" />
-              <label for="male">Male</label>
-            <div>
-              <input type="radio" customerID="female" value="Female" formControlName="gender" />
-              <label for="female">Female</label>
-            </div>
+      <!-- Select one item at a time -->
+      <div class="form-group mb-3">
+        <label for="gender">Gender:-</label>
+        <div>
+          <input class="m-2" type="radio" id="male" name="gender" value="male" formControlName="gender" />
+          <label for="male">Male</label>
+          <div>
+            <input class="m-2" type="radio" id="female" name="gender" value="Female" formControlName="gender" />
+            <label for="female">Female</label>
+          </div>
         </div>
 
-        <br>
-      <label>User Name:</label>
-      <input class="btn btn-success m-2"  type="userName" ng-model="userName" placeholder="UserName">
-    <br>
+        <!--Option selection  -->
+        <div class="form-group mb-3">
+          <label for="position"><span style="color:red;">*</span> Position:- </label>
+          <select id="position" formControlName="position">
+            <option value=" " disabled selected>Please, select one position!</option>
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="Accountant">Accountant</option>
+          </select>
+        </div>
 
+        <!-- for department data -->
+        <div class="form-group mb-3">
+          <label for="department"><span style="color:red;">*</span> Department:- </label>
+          <select id="position" formControlName="position">
+            <option value="">Please, choose Department!!</option>
+            <option *ngFor="let dept of department" [value]="dept.deptID">{{dept.deptName}}</option>
+          </select>
+        </div>
 
-    <br>
-      <label>Password:</label>
-      <input class="btn btn-success m-2"  type="password" ng-model="passw1" placeholder="Password">
-    <br>
-    <br>
-      <label>Repeat:</label>
-      <input class="btn btn-success m-2"  type="password" ng-model="password" placeholder="Repeat Password">
-    <br>
-    <br>
-    <button class="btn btn-success m-2"  ng-disabled="error || incomplete">&#10004; Save User Register!!!</button>
+        <div class="form-group">
+          <label for="userName"><span style="color:red;">*</span>UserName:- </label>
+          <input type="userName" class="form-control" formControlName="userName"
+            placeholder="Please provide email address." />
 
-    <div>
-      <!----when click on sign out to go homepage------------------>
-        <p>Back To HomePage</p>
-        <a class="btn btn-primary m-2" routerLink="/user"> Back </a>
-        <a class="btn btn-success m-2" routerLink="/wellcome">Go-To-Home</a>
-    </div>
+          <div class="form-group">
+            <label for="password"><span style="color:red;">*</span>Password:- </label>
+            <input type="password" class="form-control" formControlName="password"
+              placeholder="Please provide password." minlength="6">
+          </div>
 
+          <br>
+          <div>
+            <button [disabled]="userRegisterForm.invalid" class="btn btn-success m-2">Save Register</button>
+          </div>
+        </div>
+     
